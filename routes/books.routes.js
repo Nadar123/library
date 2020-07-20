@@ -6,14 +6,13 @@ module.exports = app => {
 
   router.post("/", books.create);
   
+  router.get("/", books.findAll);
+  
   router.get("/:id", books.findOne);
   
   router.put("/:id", books.update);
   
   router.delete("/:id", books.delete);
   
-  // router.get("/", books.findAll);
- // router.delete("/", books.deleteAll);
-
   app.use('/api/books', router);
 };
