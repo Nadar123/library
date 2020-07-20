@@ -113,20 +113,3 @@ exports.delete = (req, res) => {
       });
     });
 };
-
-// Delete all from the database.
-// exports.deleteAll = (req, res) => {
-//   authors.destroy({
-//     where: {},
-//     truncate: false
-//   })
-//     .then(nums => {
-//       res.send({ message: `${nums} authors were deleted successfully!` });
-//     })
-//     .catch(err => {
-//       res.status(500).send({
-//         message:
-//           err.message || "Some error occurred while removing all authors."
-//       });
-//     });
-// }
