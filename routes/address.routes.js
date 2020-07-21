@@ -1,19 +1,18 @@
-module.exports = app => {
+const express = require('express');
+const addressRoute = express.Router();
 const address = require("../controllers/address.controller.js");
 
-  var router = require("express").Router();
 
-  router.get("/", address.findAll);
+addressRoute.get("/", address.findAll);
   
-  router.get("/:id", address.findOne);
-  
-  router.post("/", address.create);
+addressRoute.get("/:id", address.findOne);
 
-  router.put("/:id", address.update);
-  
-  router.delete("/:id", address.delete);
-  
+addressRoute.post("/", address.create);
 
-  app.use('/api/address', router);
+addressRoute.put("/:id", address.update);
 
+addressRoute.delete("/:id", address.delete);
+
+module.exports = {
+  addressRoute
 };

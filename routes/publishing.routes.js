@@ -1,18 +1,17 @@
-module.exports = app => {
-  const publishing = require("../controllers/publishing.controller.js");
+const express = require('express');
+const publishingRoute = express.Router();
+const publishing = require("../controllers/publishing.controller");
+
+publishingRoute.get("/", publishing.findAll);
   
-    var router = require("express").Router();
-  
-    router.post("/", publishing.create);
-  
-    router.get("/", publishing.findAll);
-  
-    router.get("/:id", publishing.findOne);
-  
-    router.put("/:id", publishing.update);
-  
-    router.delete("/:id", publishing.delete);
-    
-    app.use('/api/publishing', router);
-  
-  };
+publishingRoute.get("/:id", publishing.findOne);
+
+publishingRoute.post("/", publishing.create);
+
+publishingRoute.put("/:id", publishing.update);
+
+publishingRoute.delete("/:id", publishing.delete);
+
+module.exports = {
+  publishingRoute
+};

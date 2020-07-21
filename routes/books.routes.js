@@ -1,18 +1,18 @@
+const express = require('express');
+const booksRoute = express.Router();
+const books = require("../controllers/books.controller");
 
-module.exports = app => {
-  const books = require("../controllers/books.controller.js");
 
-  var router = require("express").Router();
+booksRoute.get("/", books.findAll);
+  
+booksRoute.get("/:id", books.findOne);
 
-  router.post("/", books.create);
-  
-  router.get("/", books.findAll);
-  
-  router.get("/:id", books.findOne);
-  
-  router.put("/:id", books.update);
-  
-  router.delete("/:id", books.delete);
-  
-  app.use('/api/books', router);
+booksRoute.post("/", books.create);
+
+booksRoute.put("/:id", books.update);
+
+booksRoute.delete("/:id", books.delete);
+
+module.exports = {
+  booksRoute
 };

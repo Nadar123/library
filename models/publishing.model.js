@@ -1,6 +1,6 @@
 module.exports = (sequelize, Sequelize) => {
 
-  const pubilshing = sequelize.define("pubilshing", {
+  const publishings = sequelize.define("publishings", {
     name: {
       type: Sequelize.STRING
     },
@@ -15,5 +15,5 @@ module.exports = (sequelize, Sequelize) => {
     }
   });
 
-  return pubilshing;
+  return publishings;
 };
