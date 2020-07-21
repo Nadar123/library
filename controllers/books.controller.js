@@ -21,34 +21,6 @@ exports.create = async (req, res) => {
     res.status(500).json(error)
   }
 };
-// Create and Save
-// exports.createOld = (req, res) => {
-//   // Validate request
-//   if (!req.body.title) {
-//     res.status(400).send({
-//       message: "Content can not be empty!"
-//     });
-//     return;
-//   }
-
-//   // Create a 
-//   const books = {
-//     name: req.body.name,
-//     isbn_code: req.body.isbn_code,
-//   };
-
-//   // Save in the database
-//   books.create(books)
-//     .then(data => {
-//       res.send(data);
-//     })
-//     .catch(err => {
-//       res.status(500).send({
-//         message:
-//           err.message || "Some error occurred while creating the books"
-//       });
-//     });
-// };
 
 // Retrieve all from the database.
 exports.findAll = (req, res) => {
