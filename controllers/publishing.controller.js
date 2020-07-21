@@ -14,6 +14,7 @@ exports.create = (req, res) => {
 
   // Create a 
   const publishing = {
+    id: res.body.id,
     name: req.body.name,
     estabish_year: req.body.estabish_year,
     country: req.body.country,

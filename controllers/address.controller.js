@@ -14,6 +14,7 @@ exports.create = (req, res) => {
 
   // Create 
   const address = {
+    id: res.body.id,
     country: req.body.country,
     city: req.body.city,
     street: req.body.street,

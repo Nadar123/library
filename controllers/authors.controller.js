@@ -14,6 +14,7 @@ exports.create = (req, res) => {
 
   // Create a 
   const authors = {
+    id: res.body.id,
     first_name: req.body.first_name,
     last_name: req.body.last_name,
     date_of_birth: req.body.date_of_birth

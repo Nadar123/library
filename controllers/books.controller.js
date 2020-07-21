@@ -6,6 +6,7 @@ const Op = db.Sequelize.Op;
 exports.create = async (req, res) => {
   try {
   const new_books = {
+    id: req.body.id,
     name: req.body.name,
     isbn_code: req.body.isbn_code,
   };
