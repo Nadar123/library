@@ -9,7 +9,7 @@ module.exports = (sequelize, Sequelize) => {
     name: {
       type: Sequelize.STRING
     },
-    estabish_year: {
+    establish_year: {
       type: Sequelize.INTEGER
     },
     country: {

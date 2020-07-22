@@ -16,7 +16,7 @@ exports.create = (req, res) => {
   const publishing = {
     id: res.body.id,
     name: req.body.name,
-    estabish_year: req.body.estabish_year,
+    establish_year: req.body.establish_year,
     country: req.body.country,
     address_id: res.body.address_id
   };
