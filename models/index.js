@@ -1,5 +1,4 @@
 const dbConfig = require("../config/db.config.js");
-
 const Sequelize = require("sequelize");
 const sequelize = new Sequelize(dbConfig.DB, dbConfig.USER, dbConfig.PASSWORD, {
   host: dbConfig.HOST,
@@ -14,7 +13,7 @@ const sequelize = new Sequelize(dbConfig.DB, dbConfig.USER, dbConfig.PASSWORD, {
   }
 });
 
-const db = {};
+ db = {};
 
 db.Sequelize = Sequelize;
 db.sequelize = sequelize;
@@ -23,6 +22,5 @@ db.authors = require("./authors.model.js")(sequelize, Sequelize);
 db.books = require("./books.model.js")(sequelize, Sequelize);
 db.publishing = require("./publishing.model.js")(sequelize, Sequelize);
 db.address = require("./address.model.js")(sequelize, Sequelize);
-
 
 module.exports = db;

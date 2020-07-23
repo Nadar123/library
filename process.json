@@ -1,0 +1,22 @@
+{
+  "apps" :
+  [
+    {
+      "name"        : "Server ",
+      "script"      : "server.js",
+      "append_env_to_name": true,
+      "exec_mode" : "cluster",
+      "log_date_format"  : "YYYY-MM-DD HH:mm Z",
+      "watch": true,
+      "ignore_watch": ["public"],
+      "env_dev": {
+        "PORT": 8080,
+        "NODE_ENV": "development"
+      },
+      "env_prod": {
+        "PORT": 8080,
+        "NODE_ENV": "production"
+      }
+    }
+  ]
+}

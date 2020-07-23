@@ -1,5 +1,5 @@
-module.exports = (sequelize, Sequelize) => {
 
+module.exports = (sequelize, Sequelize) => {
   const authors = sequelize.define("authors", {
     id: {
       type: Sequelize.INTEGER,
@@ -15,6 +15,5 @@ module.exports = (sequelize, Sequelize) => {
       type: Sequelize.DATE
     }
   });
-
   return authors;
 };

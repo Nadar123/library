@@ -1,18 +1,26 @@
+const db = require("../models");
 const express = require('express');
-const addressRoute = express.Router();
-const address = require("../controllers/address.controller.js");
+const router = express.Router();
+
+const address = db.address;
+const Op = db.Sequelize.Op;
 
 
-addressRoute.get("/", address.findAll);
-  
-addressRoute.get("/:id", address.findOne);
+router.get("/:id", async(req,res)=>{
+  let id = req.params.id||null;
+  let found = await address.findByPk(id);
+  return res.json({code:200,found})
+});
 
-addressRoute.post("/", address.create);
+//router.post("/", address.create);
 
-addressRoute.put("/:id", address.update);
+//router.put("/:id", address.update);
 
-addressRoute.delete("/:id", address.delete);
+//router.delete("/:id", address.delete);
+ 
+// router.get('/test',async(req,res)=>{
+//   console.log("Here") 
+//   return res.json({code:200,data:[]})
+// })
 
-module.exports = {
-  addressRoute
-};
+module.exports = router; 
