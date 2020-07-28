@@ -22,6 +22,11 @@ module.exports = (sequelize, Sequelize) => {
         },
       },
     },
+    expenditure: {
+      type: Sequelize.STRING,
+      allowNull: false,
+    }
+
   },{});
   books.associate = function (models){
     books.hasMany(models.authors,{as:'authors',foreignKey:'bookID'});
