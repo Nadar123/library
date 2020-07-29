@@ -18,11 +18,6 @@ authorsRoute.get("/:id", async(req,res) => {
   return res.json({code:200, author: found})
 });
 
-// authorsRoute.post("/", async(req,res) => {
-//   //???
-//   const{book, authors, publishing} = res.body.
-// });
-
 authorsRoute.put("/:id", authors.update);
 
 authorsRoute.delete("/:id", authors.delete);

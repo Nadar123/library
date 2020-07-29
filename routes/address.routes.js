@@ -12,15 +12,4 @@ router.get("/:id", async(req,res)=>{
   return res.json({code:200,found})
 });
 
-//router.post("/", address.create);
-
-//router.put("/:id", address.update);
-
-//router.delete("/:id", address.delete);
- 
-// router.get('/test',async(req,res)=>{
-//   console.log("Here") 
-//   return res.json({code:200,data:[]})
-// })
-
 module.exports = router; 
