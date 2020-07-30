@@ -1,14 +1,14 @@
 const express           = require("express");
 const bodyParser        = require("body-parser");
 const cors              = require("cors");
-const addressRoute      = require('./routes/address.routes');
-const {authorsRoute}    = require('./routes/authors.routes');
+// const addressRoute      = require('./routes/address.routes');
+// const {authorsRoute}    = require('./routes/authors.routes');
 const booksRoute        = require('./routes/books.routes');
-const {publishingRoute} = require('./routes/publishing.routes');
+// const {publishingRoute} = require('./routes/publishing.routes');
 const app = express();
 
 db = require("./models");
-db.sequelize.sync().then(() => { 
+db.sequelize.sync({ force: true }).then(() => { 
   console.log("Drop and re-sync db."); 
 });
 

@@ -22,6 +22,11 @@ module.exports = (sequelize, Sequelize) => {
         },
       },
     },
+    // publishing_year: {
+    //   type: Sequelize.STRING,
+    //   allowNull: false,
+    
+    // },
     expenditure: {
       type: Sequelize.STRING,
       allowNull: false,
